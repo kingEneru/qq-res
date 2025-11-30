@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bomhr2crpedfm"]
+
+[ext_resource type="Script" uid="uid://bfydhqc12jfnp" path="res://Scripts/Table.gd" id="1_4ppvu"]
+[ext_resource type="Texture2D" uid="uid://c863sg8tr0se8" path="res://Art/item311.png" id="1_ix8et"]
+
+[node name="Table" type="Sprite2D"]
+script = ExtResource("1_4ppvu")
+
+[node name="Item311" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_ix8et")

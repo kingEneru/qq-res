@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://btxylju5akw3k"]
+
+[ext_resource type="Script" uid="uid://g21jo0c3r06k" path="res://Scripts/Customer.gd" id="1_o7g7w"]
+[ext_resource type="Texture2D" uid="uid://cdg3d24ijst8a" path="res://Art/boy_01.png" id="2_r206j"]
+
+[sub_resource type="Animation" id="Animation_r206j"]
+resource_name = "walk_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Leg:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(112.607834, 49.85135, 21.20488, 25.021751), Rect2(183.37894, 145.34976, 25.586044, 23.132584), Rect2(210.3654, 143.66307, 24.896774, 24.178589), Rect2(236.72583, 143.78778, 18.576172, 24.885056)]
+}
+
+[sub_resource type="Animation" id="Animation_kkvav"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Leg:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(112.607834, 49.85135, 21.20488, 25.021751)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j21p7"]
+_data = {
+&"RESET": SubResource("Animation_kkvav"),
+&"walk_down": SubResource("Animation_r206j")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_o7g7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Visuals"]
+position = Vector2(-24, -35)
+texture = ExtResource("2_r206j")
+centered = false
+region_enabled = true
+region_rect = Rect2(42.666786, 49.11089, 28, 27.11111)
+
+[node name="Head" type="Sprite2D" parent="Visuals"]
+position = Vector2(-12, -53)
+texture = ExtResource("2_r206j")
+region_enabled = true
+region_rect = Rect2(89.720245, 0.25842285, 41.985672, 46.184235)
+
+[node name="Leg" type="Sprite2D" parent="Visuals"]
+position = Vector2(-17, -17)
+scale = Vector2(0.88095236, 1)
+texture = ExtResource("2_r206j")
+centered = false
+region_enabled = true
+region_rect = Rect2(112.607834, 49.85135, 21.20488, 25.021751)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j21p7")
+}
