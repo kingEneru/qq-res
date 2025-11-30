@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c863sg8tr0se8" path="res://Art/item311.png" id="1_ix8et"]
 
 [node name="Table" type="Sprite2D" groups=["Tables"]]
-position = Vector2(36, -49)
+position = Vector2(1, 1.364242e-12)
+scale = Vector2(0.9358974, 1.1320754)
 texture = ExtResource("1_ix8et")
 centered = false
+offset = Vector2(0, -55)
 script = ExtResource("1_4ppvu")

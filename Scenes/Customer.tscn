@@ -49,23 +49,24 @@ script = ExtResource("1_o7g7w")
 [node name="Boy01" type="Sprite2D" parent="Visuals"]
 
 [node name="Head" type="Sprite2D" parent="Visuals/Boy01"]
-position = Vector2(-12, -53)
+position = Vector2(-7, -67)
 texture = ExtResource("2_r206j")
 region_enabled = true
 region_rect = Rect2(89.720245, 0.25842285, 41.985672, 46.184235)
 
 [node name="Body" type="Sprite2D" parent="Visuals/Boy01"]
-position = Vector2(-23, -32)
+position = Vector2(-16, -46)
 texture = ExtResource("2_r206j")
 centered = false
 region_enabled = true
 region_rect = Rect2(79.9449, 76.43318, 29.924004, 27.769478)
 
 [node name="Leg" type="Sprite2D" parent="Visuals/Boy01"]
-position = Vector2(-18, -10)
+position = Vector2(-11, -5)
 scale = Vector2(0.88095236, 1)
 texture = ExtResource("2_r206j")
 centered = false
+offset = Vector2(0, -20)
 region_enabled = true
 region_rect = Rect2(210.3654, 143.66307, 24.896774, 24.178589)
 

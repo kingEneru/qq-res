@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=4 uid="uid://bkhv6y4aavieq"]
+[gd_scene load_steps=11 format=4 uid="uid://bkhv6y4aavieq"]
 
 [ext_resource type="Script" uid="uid://b6ce3dx0t4cqd" path="res://Scripts/main_game.gd" id="1_l756w"]
 [ext_resource type="Texture2D" uid="uid://dsny6wrwu5ccx" path="res://Art/floor.png" id="2_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://bomhr2crpedfm" path="res://Scenes/table.tscn" id="3_6j5ir"]
+[ext_resource type="PackedScene" uid="uid://nag2i0lthr7r" path="res://Scenes/An-Ban.tscn" id="4_bb2iq"]
+[ext_resource type="Texture2D" uid="uid://1m1dsusx1qyx" path="res://Art/zaotai.png" id="5_18r40"]
 [ext_resource type="Texture2D" uid="uid://cmxswkadd5mfr" path="res://Art/gate.png" id="5_mgc0q"]
+[ext_resource type="PackedScene" uid="uid://c252cf4ystjo4" path="res://Scenes/chef.tscn" id="6_6y7pd"]
+[ext_resource type="PackedScene" uid="uid://dsesl1omrvdt1" path="res://Scenes/outside_background.tscn" id="7_73nn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgc0q"]
 texture = ExtResource("2_6j5ir")
@@ -43,6 +47,39 @@ position = Vector2(60, 43)
 [node name="Table4" parent="FurnitureLayer" instance=ExtResource("3_6j5ir")]
 z_index = 1
 position = Vector2(60, -101)
+
+[node name="ChuFang" parent="FurnitureLayer" instance=ExtResource("4_bb2iq")]
+position = Vector2(-405.00003, -50)
+rotation = -0.01268325
+
+[node name="ChuFang2" parent="FurnitureLayer" instance=ExtResource("4_bb2iq")]
+position = Vector2(-372.00003, -33)
+rotation = -0.01268325
+
+[node name="ChuFang3" parent="FurnitureLayer" instance=ExtResource("4_bb2iq")]
+position = Vector2(-338.00003, -19.000004)
+rotation = -0.01268325
+
+[node name="ChuFang4" parent="FurnitureLayer" instance=ExtResource("4_bb2iq")]
+position = Vector2(-304, 1.9073486e-06)
+rotation = -0.01268325
+
+[node name="ChuFang5" parent="FurnitureLayer" instance=ExtResource("4_bb2iq")]
+position = Vector2(-436.00003, -68.00001)
+rotation = -0.01268325
+
+[node name="Zaotai" type="Sprite2D" parent="FurnitureLayer"]
+position = Vector2(-202.00002, 90)
+rotation = 0.026216611
+texture = ExtResource("5_18r40")
+
+[node name="Chef" parent="FurnitureLayer" instance=ExtResource("6_6y7pd")]
+position = Vector2(-249, 152)
+rotation = 0.07804815
+
+[node name="OutsideBackground" parent="FurnitureLayer" instance=ExtResource("7_73nn6")]
+position = Vector2(-505.00003, -40.000008)
+rotation = -0.035127595
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

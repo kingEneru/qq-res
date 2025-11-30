@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsesl1omrvdt1"]
+
+[ext_resource type="Texture2D" uid="uid://bhpibevs08053" path="res://Art/house.png" id="1_f5fmh"]
+
+[node name="OutsideBackground" type="Sprite2D"]
+
+[node name="House" type="Sprite2D" parent="."]
+position = Vector2(13.25, -163.5)
+scale = Vector2(0.69447184, 0.5923913)
+texture = ExtResource("1_f5fmh")
+region_enabled = true
+region_rect = Rect2(3.1086426, -0.40457153, 1013.7135, 552.364)

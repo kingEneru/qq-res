@@ -11,8 +11,8 @@ var astar = AStarGrid2D.new()
 var map_rect =Rect2i(-50, -50, 100, 100)
 var customer_scene = preload("res://Scenes/Customer.tscn")
 
-func spawn_customer():
-	print("开始尝试生成顾客...") # 调试信息 1
+func spawn_customer(number):
+	print("已生成顾客:", number+1)
 	var customer = customer_scene.instantiate()
 	
 	# 1. 直接使用标记点的像素位置
@@ -34,10 +34,10 @@ func spawn_customer():
 
 func _ready():
 	setup_pathfinding()
-	
-	# 测试：1秒后生成一个客人 (后面我们会删掉这行)
-	await get_tree().create_timer(1.0).timeout
-	spawn_customer()
+	for i in range(4):
+		# 测试：2秒后生成一个客人 (后面我们会删掉这行)
+		await get_tree().create_timer(1.0).timeout
+		spawn_customer(i)
 
 func setup_pathfinding():
 	# 1. 配置 AStar

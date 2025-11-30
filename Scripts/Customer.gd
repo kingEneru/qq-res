@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var move_speed = 50.0
+@export var move_speed = 500.0
 @onready var animation_player = $AnimationPlayer
 @onready var visuals = $Visuals # 获取那个父节点，方便翻转
 
-enum State { WALKING, SITTING, EATING }
+enum State { WALKING, SITTING, EATING, ORDERING}
 var current_state = State.WALKING
 
 var current_path: PackedVector2Array = [] # 存储路径点
@@ -58,10 +58,12 @@ func start_sitting():
 
 	# 4. 停止走路动画
 	animation_player.stop()
-	$Visuals/Legs.region_rect = Rect2(-0.757, 50.68, 30.868, 27.228)
+	#$Visuals/Legs.region_rect = Rect2(-0.757, 50.68, 30.868, 27.228)
 	# 如果你有坐下的图片（比如把腿隐藏起来，或者换个坐姿腿），在这里切换
 	# $Visuals/Legs.hide() 
 	# animation_player.play("sit")
+	print("顾客坐下了，正在看菜单...")
+
 
 func move_to(grid_target: Vector2i):
 	# 向主游戏脚本请求路径

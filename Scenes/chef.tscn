@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://c252cf4ystjo4"]
+
+[ext_resource type="Texture2D" uid="uid://daiq3mtyr21j4" path="res://Art/chef.png" id="1_sqin4"]
+
+[node name="Chef" type="Sprite2D"]
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(-22, -155)
+texture = ExtResource("1_sqin4")
+centered = false
+region_enabled = true
+region_rect = Rect2(104.28813, 193.0218, 41.985672, 76.3376)
+
+[node name="Body" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-7, -84)
+texture = ExtResource("1_sqin4")
+centered = false
+region_enabled = true
+region_rect = Rect2(205.54085, 69.72221, 34.521545, 36.38759)
+
+[node name="Leg" type="Sprite2D" parent="."]
+position = Vector2(-7, -61)
+texture = ExtResource("1_sqin4")
+centered = false
+region_enabled = true
+region_rect = Rect2(88.05523, 129.06584, 29.856491, 34.055054)

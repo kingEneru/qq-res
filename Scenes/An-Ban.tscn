@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://nag2i0lthr7r"]
+
+[ext_resource type="Texture2D" uid="uid://b2ib45mj2a2pi" path="res://Art/anban.png" id="1_30h64"]
+
+[node name="ChuFang" type="Sprite2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Anban" type="Sprite2D" parent="Node2D"]
+position = Vector2(-31, -33)
+texture = ExtResource("1_30h64")
+centered = false
+region_enabled = true
+region_rect = Rect2(62.65101, 1.4337902, 64.38571, 61.686913)
