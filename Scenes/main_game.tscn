@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://bkhv6y4aavieq"]
+[gd_scene load_steps=7 format=4 uid="uid://bkhv6y4aavieq"]
 
 [ext_resource type="Script" uid="uid://b6ce3dx0t4cqd" path="res://Scripts/main_game.gd" id="1_l756w"]
 [ext_resource type="Texture2D" uid="uid://dsny6wrwu5ccx" path="res://Art/floor.png" id="2_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://bomhr2crpedfm" path="res://Scenes/table.tscn" id="3_6j5ir"]
-[ext_resource type="Texture2D" uid="uid://c863sg8tr0se8" path="res://Art/item311.png" id="4_mgc0q"]
 [ext_resource type="Texture2D" uid="uid://cmxswkadd5mfr" path="res://Art/gate.png" id="5_mgc0q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgc0q"]
@@ -29,25 +28,21 @@ tile_set = SubResource("TileSet_4rmt8")
 z_index = 1
 y_sort_enabled = true
 
-[node name="Table" parent="FurnitureLayer" groups=["Tables"] instance=ExtResource("3_6j5ir")]
+[node name="Table" parent="FurnitureLayer" instance=ExtResource("3_6j5ir")]
 z_index = 1
-position = Vector2(90, -136)
+position = Vector2(-141, 43)
 
-[node name="Item312" type="Sprite2D" parent="FurnitureLayer"]
-position = Vector2(129, 124)
-texture = ExtResource("4_mgc0q")
+[node name="Table2" parent="FurnitureLayer" instance=ExtResource("3_6j5ir")]
+z_index = 1
+position = Vector2(-141, -101)
 
-[node name="Item313" type="Sprite2D" parent="FurnitureLayer"]
-position = Vector2(138, -60)
-texture = ExtResource("4_mgc0q")
+[node name="Table3" parent="FurnitureLayer" instance=ExtResource("3_6j5ir")]
+z_index = 1
+position = Vector2(60, 43)
 
-[node name="Item315" type="Sprite2D" parent="FurnitureLayer"]
-position = Vector2(-184, -61)
-texture = ExtResource("4_mgc0q")
-
-[node name="Item311" type="Sprite2D" parent="FurnitureLayer"]
-position = Vector2(-72, -121)
-texture = ExtResource("4_mgc0q")
+[node name="Table4" parent="FurnitureLayer" instance=ExtResource("3_6j5ir")]
+z_index = 1
+position = Vector2(60, -101)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

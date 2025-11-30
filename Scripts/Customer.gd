@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var move_speed = 80.0
+@export var move_speed = 50.0
 @onready var animation_player = $AnimationPlayer
 @onready var visuals = $Visuals # 获取那个父节点，方便翻转
 
@@ -20,6 +20,9 @@ func find_seat():
 	
 	# 2. 筛选出空桌子
 	for table in tables:
+		if not "is_occupied" in table:
+			print("警告：发现混入 Tables 组的怪东西：", table.name)
+			continue
 		if not table.is_occupied:
 			target_table = table
 			table.sit_down() # 先占座，防止别人抢
